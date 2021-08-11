@@ -24,8 +24,15 @@ Example Playbook
 
 Clone this repository in your machine and go to apache directory. The default Ansible Roles location is /etc/ansible/roles/, use following command to go to apache directory.
 cd /etc/ansible/roles/apache
+Then copy the apache.yml from apache directory file to roles directory using below command.
+cp apache.yml ..
+Then go back to roles direcotry using below command.
+cd ..
+Then check the playbook for syntax errors and correct them if you find any.
+ansible-playbook apache.yml --syntax-check
 To run the roles to configure apache on client nodes just run the apache.yml file using below command.
 ansible-playbook -v apache.yml
+You are done, you have successfully configured apache server on client nodes.
 
 License
 -------
