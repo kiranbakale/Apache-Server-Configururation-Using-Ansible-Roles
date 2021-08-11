@@ -41,7 +41,9 @@ BSD
 
 Author Information
 ------------------
-Vikas Nehra (Nehra Classes)
+Vikas Nehra
+(Nehra Classes Youtube Channel)
 https://www.youtube.com/NehraClasses?sub_confirmation=1
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Telegram: http://t.me/NehraClasses
+Email: nehraclasses@gmail.com
 # Apache-Server-Configururation-Using-Ansible-Roles
