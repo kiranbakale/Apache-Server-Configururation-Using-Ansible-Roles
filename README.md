@@ -1,31 +1,31 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+Apache Web Server Configuration Using Ansible Roles in RHEL/CentOS.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Ansible must be installed in control node and there must be passwordless authentication setup with client nodes where you want to deploy webserver.
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+Make sure that the hosts group is defined in the inventory file i.e. /etc/ansible/hosts and make the changes in the apache.yml file for your hosts group name before running it. Also don't forget to replace the existing index.html file with you own file which you want to host on webserver in files directory under apache.
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+Ansible must be installed in control node and there must be passwordless authentication setup with client nodes where you want to deploy webserver.
+Make sure that the hosts group is defined in the inventory file i.e. /etc/ansible/hosts and make the changes in the apache.yml file for your hosts group name before running it. Also don't forget to replace the existing index.html file with you own file which you want to host on webserver in files directory under apache.
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+Clone this repository in your machine and go to apache directory. The default Ansible Roles location is /etc/ansible/roles/, use following command to go to apache directory.
+cd /etc/ansible/roles/apache
+To run the roles to configure apache on client nodes just run the apache.yml file using below command.
+ansible-playbook -v apache.yml
 
 License
 -------
@@ -34,6 +34,7 @@ BSD
 
 Author Information
 ------------------
-
+Vikas Nehra (Nehra Classes)
+https://www.youtube.com/NehraClasses?sub_confirmation=1
 An optional section for the role authors to include contact information, or a website (HTML is not allowed).
 # Apache-Server-Configururation-Using-Ansible-Roles
